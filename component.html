@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title></title>
+
+
+   </head>
+   <body>
+
+      <div id="root">
+         <h3>Using component and slot</h3>
+         <task>home</task>
+         <task>about</task>
+         <task>settings</task>
+
+         <h3>Using component with array</h3>
+         <list>fe</list>
+         <list>bb</list>
+
+         <h3>component inside other</h3>
+         <!-- <task-list>3</task-list> -->
+         <task-list></task-list>
+      </div>
+
+      <script src="https://unpkg.com/vue@2.4.2"></script>
+      <script src="main.js"></script>
+      <script>
+
+         var app = new Vue({
+            el: "#root",
+            data:{
+
+            }
+
+         });
+
+
+      </script>
+   </body>
+</html>

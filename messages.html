@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>Massages</title>
+
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+   </head>
+   <body>
+
+      <div id="root">
+         <div class="container">
+            <div class="row">
+              <div class="col-md-8 col-md-offset-2">
+                <h1>send data using props</h1>
+                <msg title="Test 1" body="Test 1 aaaa"></msg>
+                <msg title="Test 2" body="Test 2 bbbb"></msg>
+                <msg title="Test 3" body="Test 3 cccc"></msg>
+                <msg title="Test 4" body="Test 4 eeee"></msg>
+                <msg title="Test 5" body="Test 5 ffff"></msg>
+
+                <h1>send data using array</h1>
+                <user v-for="user in users" :id="user.id" :username="user.username"></user>
+
+                <h1>send data using object</h1>
+                <usr v-for="user in users" :obj="user"></usr>
+              </div>
+            </div>
+         </div>
+      </div>
+
+      <script src="https://unpkg.com/vue@2.4.2"></script>
+      <script src="main2.js"></script>
+      <script>
+
+         var app = new Vue({
+            el: "#root",
+            data:{
+               users:[
+                  {'id':'1', 'username':'russul'},
+                  {'id':'2', 'username':'chiku'},
+               ]
+            }
+
+         });
+
+
+      </script>
+   </body>
+</html>
